@@ -3,13 +3,32 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Al Amir Driving School · Road Ready</title>
+<title>Al Amir Automobile Driving School · Ajman | الأمير لتعليم قيادة السيارات</title>
+<meta name="description" content="Al Amir Automobile Driving School in Ajman, UAE. Driving licence packages from AED 6,999 with pick &amp; drop, VIP tests and licence services. Call +971 58 826 1065.">
+<link rel="canonical" href="https://alamirdrivingschool.com/">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#13204a">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Al Amir Automobile Driving School">
+<meta property="og:title" content="Al Amir Automobile Driving School · Ajman">
+<meta property="og:description" content="Driving licence packages from AED 6,999 with pick &amp; drop in Ajman, VIP tests and all licence services. Call or WhatsApp +971 58 826 1065.">
+<meta property="og:url" content="https://alamirdrivingschool.com/">
+<meta property="og:image" content="https://alamirdrivingschool.com/og-image.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "DrivingSchool", "name": "Al Amir Automobile Driving School", "alternateName": "الأمير لتعليم قيادة السيارات", "url": "https://alamirdrivingschool.com/", "logo": "https://alamirdrivingschool.com/icon-512.png", "image": "https://alamirdrivingschool.com/og-image.jpg", "telephone": "+971588261065", "email": "alamirdrivingschool@gmail.com", "address": {"@type": "PostalAddress", "streetAddress": "Sheikh Ammar Bin Humaid St, near Drivers & Vehicles Licensing Centre (CG66+CR2)", "addressLocality": "Ajman", "addressRegion": "Ajman", "addressCountry": "AE"}, "geo": {"@type": "GeoCoordinates", "latitude": 25.411, "longitude": 55.512028}, "hasMap": "https://www.google.com/maps?q=25.411000,55.512028", "areaServed": "Ajman", "priceRange": "AED 500 – AED 12,999"}</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{--navy:#13204a;--navy2:#0b1533;--yellow:#f8c514;--yellow2:#ffd84a;--ink:#1b2440;--muted:#5d6785;--line:#e3e8f3;--bg:#f5f7fc;--white:#fff;--wa:#25d366}
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
 body{font-family:Cairo,system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.55}
 a{color:inherit;text-decoration:none}
 .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
@@ -40,7 +59,14 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;heigh
 .brand small{font-size:12px;color:var(--muted);font-weight:700}
 nav ul{display:flex;gap:26px;list-style:none;font-weight:700;font-size:15px}
 nav a:hover{color:#c99a00}
-.burger{display:none;background:none;border:0}
+.burger{display:none;background:none;border:0;width:46px;height:46px;border-radius:10px;cursor:pointer;position:relative;-webkit-tap-highlight-color:transparent}
+.burger span{position:absolute;left:11px;right:11px;height:3px;border-radius:2px;background:var(--navy);transition:transform .25s,opacity .2s,top .25s}
+.burger span:nth-child(1){top:14px}.burger span:nth-child(2){top:21.5px}.burger span:nth-child(3){top:29px}
+header.open .burger span:nth-child(1){top:21.5px;transform:rotate(45deg)}
+header.open .burger span:nth-child(2){opacity:0}
+header.open .burger span:nth-child(3){top:21.5px;transform:rotate(-45deg)}
+.nav-extra{display:none}
+.nav-backdrop{display:none}
 /* hero */
 .hero{position:relative;background:linear-gradient(120deg,var(--navy) 0%,#1d2f6b 70%);color:#fff;overflow:hidden}
 .hero:before{content:"";position:absolute;inset:auto -10% -40% -10%;height:70%;background:var(--yellow);transform:rotate(-6deg);border-radius:50% 50% 0 0/40% 40% 0 0;opacity:.95}
@@ -178,10 +204,29 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:40px;padding
 .loc-list b{color:var(--navy)}.loc-list a{font-weight:700}
 .map{width:100%;height:380px;border:0;border-radius:18px;box-shadow:0 20px 40px rgba(19,32,74,.12);background:#dbe3f6}
 @media (max-width:960px){.why .feats{grid-template-columns:1fr 1fr}.bundles{grid-template-columns:1fr}.svcs{grid-template-columns:1fr 1fr}.loc{grid-template-columns:1fr}.loc h2{font-size:34px}}
-@media (max-width:560px){.svcs{grid-template-columns:1fr}.map{height:280px}.topbar .left a:nth-of-type(2),.topbar .left span:first-child>a+*{}}
+@media (max-width:560px){.svcs{grid-template-columns:1fr 1fr;gap:10px}
+.svc{flex-direction:column;align-items:flex-start;gap:10px;padding:14px;font-size:14px;line-height:1.3}
+.svc .si{width:36px;height:36px}.svc .si svg{width:20px;height:20px}
+.field input,.field select{font-size:16px}
+#courses .courses{grid-template-columns:1fr 1fr;gap:12px}
+.course{padding:16px}.course .ic{width:44px;height:44px;margin-bottom:10px}.course .ic svg{width:24px;height:24px}
+.course h3{font-size:16px;line-height:1.3}.course p{font-size:12.5px;margin:4px 0 10px}
+.course .meta{flex-direction:column;align-items:flex-start;gap:4px;font-size:12px}
+.course .tag{position:static;display:inline-block;margin-bottom:8px}
+section{padding:56px 0}.map{height:280px}.topbar .left a:nth-of-type(2),.topbar .left span:first-child>a+*{}}
 @media (max-width:960px){
- nav,.topbar .left span:nth-child(2){display:none}
+ .topbar .left span:nth-child(2){display:none}
  .burger{display:block}
+ header .wrap{position:relative}
+ nav{position:absolute;top:100%;left:0;right:0;background:#fff;box-shadow:0 18px 30px rgba(19,32,74,.18);border-top:1px solid var(--line);padding:8px 20px 20px;max-height:calc(100vh - 120px);overflow-y:auto;transform:translateY(-8px);opacity:0;visibility:hidden;transition:transform .25s,opacity .25s,visibility .25s;z-index:49}
+ header.open nav{transform:none;opacity:1;visibility:visible}
+ nav ul{flex-direction:column;gap:0;font-size:17px}
+ nav li a{display:block;padding:15px 4px;border-bottom:1px solid var(--line)}
+ .nav-extra{display:grid;gap:10px;margin-top:16px}
+ .nav-extra .btn{justify-content:center;width:100%}
+ .nav-backdrop{display:block;position:fixed;inset:0;background:rgba(11,21,51,.45);opacity:0;visibility:hidden;transition:.25s;z-index:40}
+ body.menu-open .nav-backdrop{opacity:1;visibility:visible}
+ body.menu-open .wa-float{opacity:0;pointer-events:none}
  .hero .wrap,.why .wrap{grid-template-columns:1fr}
  .hero h1{font-size:50px}
  [dir=rtl] .hero h1{font-size:40px}
@@ -209,6 +254,7 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:40px;padding
 </head>
 <body>
 
+<div class="nav-backdrop" id="navBackdrop"></div>
 <div class="topbar"><div class="wrap">
  <div class="left">
   <span><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg> <a href="tel:+971588261065"><bdi dir="ltr">+971 58 826 1065</bdi></a> · <a href="tel:+971504994893"><bdi dir="ltr">+971 50 499 4893</bdi></a></span>
@@ -222,17 +268,22 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:40px;padding
   <img src="data:image/jpeg;base64,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" alt="Al Amir logo">
   <span><b data-ar="<em>الأمير</em> لتعليم القيادة"><em>AL AMIR</em> DRIVING</b><small data-ar="معاً .. نحو قيادة آمنة">Together towards safe driving</small></span>
  </a>
- <nav><ul>
+ <nav id="mainNav"><ul>
   <li><a href="#courses" data-ar="الدورات">Courses</a></li>
   <li><a href="#packages" data-ar="الباقات">Packages</a></li>
   <li><a href="#services" data-ar="الخدمات">Services</a></li><li><a href="#location" data-ar="الموقع">Location</a></li>
   <li><a href="#why" data-ar="لماذا نحن">Why us</a></li>
   <li><a href="#faq" data-ar="الأسئلة">FAQ</a></li>
- </ul></nav>
+ </ul>
+ <div class="nav-extra">
+  <a class="btn btn-y" href="#book" data-ar="احجز الآن">Book now</a>
+  <a class="btn btn-n" href="tel:+971588261065"><bdi dir="ltr">+971 58 826 1065</bdi></a>
+  <a class="btn btn-n" href="tel:+971504994893"><bdi dir="ltr">+971 50 499 4893</bdi></a>
+ </div></nav>
  <div class="head-cta" style="display:flex;gap:10px;align-items:center">
   <a class="btn btn-wa" href="https://wa.me/971588261065" target="_blank" style="padding:11px 16px"><svg class="i" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg><span>WhatsApp</span></a>
   <a class="btn btn-y" href="#book" style="padding:11px 18px" data-ar="احجز الآن">Book now</a>
-  <button class="burger" aria-label="menu"><svg width="28" height="28" viewBox="0 0 24 24" stroke="#13204a" stroke-width="2.5"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+  <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav"><span></span><span></span><span></span></button>
  </div>
 </div></header>
 
@@ -344,7 +395,7 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:40px;padding
 <section id="location"><div class="wrap loc">
  <div><span class="kicker" data-ar="موقعنا">Find us</span><h2 class="display" data-ar="زورونا في عجمان">Visit us in Ajman</h2>
   <ul class="loc-list">
-   <li><b data-ar="العنوان">Address</b><span data-ar="الأمير لتعليم قيادة السيارات، عجمان، الإمارات">Al Amir Automobile Driving School, Ajman, UAE</span></li>
+   <li><b data-ar="العنوان">Address</b><span data-ar="شارع الشيخ عمار بن حميد، الجرف، عجمان، بجوار مركز ترخيص السائقين والمركبات">Sheikh Ammar Bin Humaid St, Al Jurf, Ajman, next to the Drivers &amp; Vehicles Licensing Centre</span></li>
    <li><b data-ar="اتصل بنا">Call us</b><span><a href="tel:+971588261065"><bdi dir="ltr">+971 58 826 1065</bdi></a><br><a href="tel:+971504994893"><bdi dir="ltr">+971 50 499 4893</bdi></a></span></li>
   </ul>
   <div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn btn-y" href="https://www.google.com/maps?q=25.411000,55.512028" target="_blank" data-ar="الاتجاهات على خرائط جوجل">Get directions</a><a class="btn btn-wa" href="https://wa.me/971588261065" target="_blank" data-ar="واتساب">WhatsApp</a></div>
@@ -372,8 +423,8 @@ footer .bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:40px;padding
 function seg(b){b.parentNode.querySelectorAll('button').forEach(x=>x.classList.remove('on'));b.classList.add('on');const h=b.closest('.field').querySelector('input[type=hidden]');if(h)h.value=b.dataset.val}
 /* Booking form -> email via FormSubmit (https://formsubmit.co). Requests are emailed to the address below. */
 const BOOKING_EMAIL='alamirdrivingschool@gmail.com';
-const FM={en:{sending:'Sending…',ok:'✓ Thank you! Your request was sent. We will call you shortly.',err:'Sorry, the request could not be sent. Please WhatsApp us on +971 58 826 1065.',req:'Please enter your name and a valid mobile number.',btn:'Request my slot',sent:'✓ Request sent'},
- ar:{sending:'جارٍ الإرسال…',ok:'✓ شكراً! تم إرسال طلبك وسنتصل بك قريباً.',err:'عذراً، تعذّر إرسال الطلب. يرجى مراسلتنا على واتساب ‎+971 58 826 1065.',req:'يرجى إدخال الاسم ورقم جوال صحيح.',btn:'اطلب موعدي',sent:'✓ تم الإرسال'}};
+const FM={en:{sending:'Sending…',ok:'✓ Thank you! Your request was sent. We will call you shortly.',err:'Sorry, the request could not be sent. Please WhatsApp us on +971 58 826 1065.',req:'Please enter your name and a valid mobile number.',btn:'Request my slot',sent:'✓ Request sent',slow:'✓ Your request is on its way. If we don\'t call you within 30 minutes, please WhatsApp us on +971 58 826 1065.'},
+ ar:{sending:'جارٍ الإرسال…',ok:'✓ شكراً! تم إرسال طلبك وسنتصل بك قريباً.',err:'عذراً، تعذّر إرسال الطلب. يرجى مراسلتنا على واتساب ‎+971 58 826 1065.',req:'يرجى إدخال الاسم ورقم جوال صحيح.',btn:'اطلب موعدي',sent:'✓ تم الإرسال',slow:'✓ طلبك في الطريق إلينا. إن لم نتصل بك خلال ٣٠ دقيقة، راسلنا على واتساب ‎+971 58 826 1065.'}};
 document.getElementById('bookForm').addEventListener('submit',async e=>{
  e.preventDefault();const f=e.target,btn=document.getElementById('bookBtn'),msg=document.getElementById('formMsg'),L=FM[document.documentElement.lang==='ar'?'ar':'en'];
  msg.className='form-msg';
@@ -386,14 +437,32 @@ document.getElementById('bookForm').addEventListener('submit',async e=>{
  data['Sent from']=location.href;
  btn.disabled=true;btn.textContent=L.sending;
  try{
-  const r=await fetch('https://formsubmit.co/ajax/'+BOOKING_EMAIL,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)});
-  const j=await r.json().catch(()=>({}));
+  const ctrl=new AbortController(),timer=setTimeout(()=>ctrl.abort(),12000);
+  let r,j={};
+  try{
+   r=await fetch('https://formsubmit.co/ajax/'+BOOKING_EMAIL,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data),signal:ctrl.signal});
+   clearTimeout(timer);j=await r.json().catch(()=>({}));
+  }catch(err){
+   clearTimeout(timer);
+   if(err.name==='AbortError'){done(L.slow,'ok');return}
+   throw err;
+  }
   if(!r.ok||String(j.success)==='false')throw new Error(j.message||r.status);
-  msg.textContent=L.ok;msg.classList.add('ok');btn.textContent=L.sent;f.reset();
+  done(L.ok,'ok');
+ }catch(err){console.error('Booking form error',err);msg.textContent=L.err;msg.className='form-msg err';btn.disabled=false;btn.textContent=L.btn}
+ function done(text,cls){msg.textContent=text;msg.className='form-msg '+cls;btn.textContent=L.sent;f.reset();
   f.querySelectorAll('.seg button').forEach((x,i)=>x.classList.toggle('on',i===0));f.querySelector('[name=Gearbox]').value='Automatic';
-  setTimeout(()=>{btn.disabled=false;btn.textContent=L.btn},4000);
- }catch(err){console.error('Booking form error',err);msg.textContent=L.err;msg.classList.add('err');btn.disabled=false;btn.textContent=L.btn}
+  setTimeout(()=>{btn.disabled=false;btn.textContent=L.btn},5000)}
 });
+(function(){
+ const hd=document.querySelector('header'),bt=hd.querySelector('.burger'),bd=document.getElementById('navBackdrop');
+ function setOpen(o){hd.classList.toggle('open',o);document.body.classList.toggle('menu-open',o);bt.setAttribute('aria-expanded',o);bt.setAttribute('aria-label',o?'Close menu':'Open menu')}
+ bt.addEventListener('click',e=>{e.stopPropagation();setOpen(!hd.classList.contains('open'))});
+ bd.addEventListener('click',()=>setOpen(false));
+ document.querySelectorAll('#mainNav a').forEach(a=>a.addEventListener('click',()=>setOpen(false)));
+ document.addEventListener('keydown',e=>{if(e.key==='Escape')setOpen(false)});
+ window.addEventListener('resize',()=>{if(innerWidth>960)setOpen(false)});
+})();
 function setLang(l){
  const h=document.documentElement;h.lang=l;h.dir=l==='ar'?'rtl':'ltr';
  document.querySelectorAll('[data-ar]').forEach(el=>{if(el.dataset.en===undefined)el.dataset.en=el.innerHTML;el.innerHTML=l==='ar'?el.dataset.ar:el.dataset.en});
